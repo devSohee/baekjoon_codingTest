@@ -11,8 +11,11 @@ for i in range(N):
 
 M = int(input().rstrip())
 result = []
-for d in list(map(int, input().rstrip().split())):
-    sq.appendleft(d)
-    result.append(sq.pop())
-
-print(*result)
+data = list(map(int, input().rstrip().split()))
+if sq:
+    for d in data:
+        sq.appendleft(d)
+        result.append(sq.pop())
+    print(*result)
+else:
+    print(*data)
